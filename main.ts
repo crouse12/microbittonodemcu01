@@ -121,7 +121,7 @@ namespace microbittonodemcu {
      //% blockId=thingspeak3 block="thingspeak Channel ID %key | fields value %value1 "
     //% weight=101
     export function thingspeak3(key:string, value1: value555): string {
-        serial.writeLine("t2/="+key+","+value1.toString()+"\\n")
+        serial.writeLine("t="+key+","+value1.toString()+"\\n")
         basic.pause(100)
         let a=serial.readString()
         basic.pause(3000)
