@@ -120,11 +120,11 @@ namespace microbittonodemcu {
     }
      //% blockId=thingspeak3 block="thingspeak Channel ID %key | fields value %value1 "
     //% weight=101
-    export function thingspeak3(key:string, value1: value555): number {
+    export function thingspeak3(key:string, value1: value555): string {
         serial.writeLine("t2\="+key+","+value1.toString()+"\\n")
         basic.pause(3000)
         let a=serial.readString()
-        return 11
+        return a
 
     }      
 
