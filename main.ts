@@ -17,16 +17,7 @@ namespace microbittonodemcu {
      }
       
       
-      export enum value55 {
-        1 ,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-     }
+
       export enum type {
         INPUT = 2,
         OUTPUT = 1
