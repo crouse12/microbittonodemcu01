@@ -1,5 +1,5 @@
 //% weight=0 color=#3003f1 icon="\uf0ad" block="Microbitnodemcu"
-namespace microbitnodemcu {
+namespace microbittonodemcu {
       export enum analogpin {
         A0 = 0
      }
