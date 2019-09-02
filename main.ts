@@ -16,6 +16,18 @@ namespace microbittonodemcu {
         D8 = 15
      }
       
+     
+      export enum value555 {
+        field1 = 1 ,
+        field2 = 2,
+        field3 = 3,
+        field4 = 4,
+        field5 = 5,
+        field6 = 6,
+        field7 = 7,
+        field8 = 8
+     }
+      
       
 
       export enum type {
@@ -106,6 +118,14 @@ namespace microbittonodemcu {
         serial.writeLine("t\="+key+","+b+"\\n")
         basic.pause(8000)
     }
-      
+     //% blockId=thingspeak3 block="thingspeak Channel ID %key | fields value %value1 "
+    //% weight=101
+    export function thingspeak3(key:string, value1: value555): number {
+        serial.writeLine("t2\="+key+","+value1.toString()+"\\n")
+        basic.pause(3000)
+        let a=serial.readString()
+        return 11
+
+    }      
 
 }
