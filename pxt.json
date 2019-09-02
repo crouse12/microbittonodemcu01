@@ -1,6 +1,6 @@
 {
-    "name": "microbitnodemcu",
-    "version": "0.2",
+    "name": "microbittonodemcu",
+    "version": "0.3",
     "description": "這是micro:bit的nodemcu控制積木",
     "license": "MIT",
     "dependencies": {
