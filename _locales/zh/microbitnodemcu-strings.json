@@ -1,13 +1,13 @@
 {
-    "microbitnodemcu|block": "控制nodemcu",
-    "microbitnodemcu.setpinmode|block": "設定nodemcu數位腳位 %pin|為 %XY",
-    "microbitnodemcu.setdigital|block": "nodemcu數位腳位 %pin|的值為 %XY",
-    "microbitnodemcu.setpinmode1|block": "設定nodemcu數位腳位 %pin|為 %XY",
-    "microbitnodemcu.setdigital1|block": "nodemcu數位腳位 %pin|的值為 %XY",
-    "microbitnodemcu.setdigital2|block": "nodemcu數位腳位 %pin|的PWM輸出值為 %XY",
-    "microbitnodemcu.setdigital3|block": "讀取nodemcu數位腳位 %pin 的值",
-    "microbitnodemcu.setdigital4|block": "讀取nodemcu類比腳位 %pin 的值",
-    "microbitnodemcu.thingspeak1|block": "設定thingspeak的key %key | field1的值 %value1",
-    "microbitnodemcu.thingspeak2|block": "設定thingspeak的key %key | 多個field的值 %value1",
-    "microbitnodemcu.setMicrobit|block": "設定Microbit |TX %tx|RX %rx|baudrate %baudrate"
+    "microbittonodemcu|block": "控制nodemcu",
+    "microbittonodemcu.setpinmode|block": "設定nodemcu數位腳位 %pin|為 %XY",
+    "microbittonodemcu.setdigital|block": "nodemcu數位腳位 %pin|的值為 %XY",
+    "microbittonodemcu.setpinmode1|block": "設定nodemcu數位腳位 %pin|為 %XY",
+    "microbittonodemcu.setdigital1|block": "nodemcu數位腳位 %pin|的值為 %XY",
+    "microbittonodemcu.setdigital2|block": "nodemcu數位腳位 %pin|的PWM輸出值為 %XY",
+    "microbittonodemcu.setdigital3|block": "讀取nodemcu數位腳位 %pin 的值",
+    "microbittonodemcu.setdigital4|block": "讀取nodemcu類比腳位 %pin 的值",
+    "microbittonodemcu.thingspeak1|block": "設定thingspeak的key %key | field1的值 %value1",
+    "microbittonodemcu.thingspeak2|block": "設定thingspeak的key %key | 多個field的值 %value1",
+    "microbittonodemcu.setMicrobit|block": "設定Microbit |TX %tx|RX %rx|baudrate %baudrate"
 }
