@@ -122,7 +122,7 @@ namespace microbittonodemcu {
 //        serial.writeLine("t2\="+key+","+value1.toString()+"\\n")
 //        basic.pause(3000)
 //        let a=serial.readString()
-        return parseFloat(a)
+        return 11
 
     }
 }
