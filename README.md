@@ -1,4 +1,4 @@
-# MicrobitNodemcu
+# MicrobittoNodemcu
 
 Micro:Bit控制Nodemcu積木
 
@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-microbitnodemcu=github:crouse12/microbitnodemcu
+microbittonodemcu=github:crouse12/microbittonodemcu
 ```
