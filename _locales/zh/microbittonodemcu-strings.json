@@ -9,6 +9,6 @@
     "microbittonodemcu.setdigital4|block": "讀取nodemcu類比腳位 %pin 的值",
     "microbittonodemcu.thingspeak1|block": "設定thingspeak的key %key | 寫入field1 %value1",
     "microbittonodemcu.thingspeak2|block": "設定thingspeak的key %key | 寫入多個field %value1",
-    "microbittonodemcu.thingspeak2|block": "設定thingspeak Channel ID %key | 讀取 %value1 的值"
+    "microbittonodemcu.thingspeak2|block": "設定thingspeak Channel ID %key | 讀取 %value1 的值",
     "microbittonodemcu.setMicrobit|block": "設定Microbit |TX %tx|RX %rx|baudrate %baudrate"
 }
