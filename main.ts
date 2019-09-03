@@ -55,26 +55,26 @@ namespace microbittonodemcu {
     }
       
       
-    //% blockId=setpinmode1 block="set nodemcu digital pin %pin | for %XY"
+    //% blockId=setpinmode1 block="Set nodemcu digital pin %pin | for %XY"
     //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
      
-    //% blockId=setdigital1 block="set nodemcu digital pin  %pin | value to %XY"
+    //% blockId=setdigital1 block="Set nodemcu digital pin  %pin | value to %XY"
     //% weight=101
     export function setdigital1(pin: digitalpin, XY: value):void {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
-    //% blockId=setdigital2 block="set nodemcu digital pin  %pin | PWM value to %XY"
+    //% blockId=setdigital2 block="Set nodemcu digital pin  %pin | PWM value to %XY"
     //% weight=101
     export function setdigital2(pin: digitalpin, XY: number):void {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
  
-    //% blockId=setdigital3 block="read nodemcu digital pin  %pin value"
+    //% blockId=setdigital3 block="Read nodemcu digital pin  %pin value"
     //% weight=101
     export function setdigital3(pin: digitalpin):string {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
@@ -82,7 +82,7 @@ namespace microbittonodemcu {
         let a=serial.readString()
         return a;
     }
-    //% blockId=setdigital4 block="read nodemcu analog pin  %pin value"
+    //% blockId=setdigital4 block="Read nodemcu analog pin  %pin value"
     //% weight=101 
     export function setdigital4(pin: analogpin):string {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
@@ -91,14 +91,14 @@ namespace microbittonodemcu {
         return a
     }   
       
-    //% blockId=thingspeak1 block="thingspeak key %key | write field1 value %value1 "
+    //% blockId=thingspeak1 block="Thingspeak key %key | Write field1 value %value1 "
     //% weight=101 
     export function thingspeak1(key:string, value1: string) {
         serial.writeLine("t\="+key+","+value1+"\\n")
         basic.pause(8000)
     }
       
-    //% blockId=thingspeak2 block="thingspeak key %key | write fields value %value1 "
+    //% blockId=thingspeak2 block="Thingspeak key %key | Write fields value %value1 "
     //% weight=101
     export function thingspeak2(key:string, value1: number[]) {
         let a=value1.length
@@ -118,7 +118,7 @@ namespace microbittonodemcu {
         serial.writeLine("t\="+key+","+b+"\\n")
         basic.pause(8000)
     }
-     //% blockId=thingspeak3 block="thingspeak Channel ID %key | read %value1 value"
+     //% blockId=thingspeak3 block="Thingspeak Channel ID %key | Read %value1 value"
     //% weight=101
     export function thingspeak3(key:number, value1: value555): string {
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
