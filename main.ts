@@ -91,14 +91,14 @@ namespace microbittonodemcu {
         return a
     }   
       
-    //% blockId=thingspeak1 block="thingspeak key %key | field1 value %value1 "
+    //% blockId=thingspeak1 block="thingspeak key %key | write field1 value %value1 "
     //% weight=101 
     export function thingspeak1(key:string, value1: string) {
         serial.writeLine("t\="+key+","+value1+"\\n")
         basic.pause(8000)
     }
       
-    //% blockId=thingspeak2 block="thingspeak key %key | fields value %value1 "
+    //% blockId=thingspeak2 block="thingspeak key %key | write fields value %value1 "
     //% weight=101
     export function thingspeak2(key:string, value1: number[]) {
         let a=value1.length
@@ -118,7 +118,7 @@ namespace microbittonodemcu {
         serial.writeLine("t\="+key+","+b+"\\n")
         basic.pause(8000)
     }
-     //% blockId=thingspeak3 block="thingspeak Channel ID %key | fields value %value1 "
+     //% blockId=thingspeak3 block="thingspeak Channel ID %key | read %value1 value"
     //% weight=101
     export function thingspeak3(key:number, value1: value555): string {
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
