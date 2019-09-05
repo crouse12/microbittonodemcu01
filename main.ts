@@ -76,19 +76,21 @@ namespace microbittonodemcu {
  
     //% blockId=setdigital3 block="Read nodemcu digital pin  %pin value"
     //% weight=101
-    export function setdigital3(pin: digitalpin):string {
+    export function setdigital3(pin: digitalpin):number {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
-        return a;
+        a=a.substr(0, a.length - 2)
+        return parseFloat(a);
     }
     //% blockId=setdigital4 block="Read nodemcu analog pin  %pin value"
     //% weight=101 
-    export function setdigital4(pin: analogpin):string {
+    export function setdigital4(pin: analogpin):number {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
-        return a
+        a=a.substr(0, a.length - 2)
+        return parseFloat(a)
     }   
       
     //% blockId=thingspeak1 block="Thingspeak key %key | Write field1 value %value1 "
@@ -124,7 +126,7 @@ namespace microbittonodemcu {
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
         basic.pause(100)
         let a=serial.readString()
-        basic.pause(3000)
+        basic.pause(1500)
         return a
 
     }      
