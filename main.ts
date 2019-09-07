@@ -44,7 +44,7 @@ namespace microbittonodemcu {
         AP = 0
      }
       
-    //% blockId=setWiFi block="Set Nodemcu SSID %SSID| Pass %PASS| Mode %mode1 "
+    //% blockId=setWiFi block="Set Nodemcu | SSID %SSID| Pass %PASS| Mode %mode1 "
     //% weight=101
     //% blockExternalInputs = 1
     export function setWiFi(SSID: string, PASS: string, mode1: mode) {
