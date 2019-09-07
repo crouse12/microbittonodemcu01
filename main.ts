@@ -143,7 +143,7 @@ namespace microbittonodemcu {
     }     
       
       
-    //% blockId=ifttt1 block="Connect to IFTTT API key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3 "
+    //% blockId=ifttt1 block="Connect to IFTTT | API key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3 "
     //% weight=101 
     export function ifttt1(key: string, event: string, value1: string, value2: string, value3: string) {
         serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
