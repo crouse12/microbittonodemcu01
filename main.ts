@@ -133,7 +133,7 @@ namespace microbittonodemcu {
       
     //% blockId=ifttt1 block="IFTTT key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3 "
     //% weight=101
-    //% blockExternalInputs = 1
+
     export function ifttt1(key:number, event: string, value1: string, value2: string, value3: string) {
         serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
         basic.pause(100)
