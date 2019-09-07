@@ -39,6 +39,18 @@ namespace microbittonodemcu {
         LOW = 0
      }
 
+     export enum mode {
+        STA = 1,
+        AP = 0
+     }
+      
+    //% blockId=setWiFi block="Set Nodemcu SSID %SSID| Pass %PASS| Mode %mode1 "
+    //% weight=101
+    //% blockExternalInputs = 1
+    export function setWiFi(SSID: string, PASS: string, mode1: mode) {
+        serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
+        basic.pause(2000)
+    }
 
     //% blockId=setMicrobit block="Initialize Microbit |TX %tx|RX %rx|Baud rate %baudrate "
     //% tx.defl=SerialPin.P0
