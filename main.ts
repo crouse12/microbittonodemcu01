@@ -128,7 +128,20 @@ namespace microbittonodemcu {
         basic.pause(1500)
         return a
 
-    }      
+    }     
+      
+      
+    //% blockId=ifttt1 block="IFTTT key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3 "
+    //% weight=101
+    //% blockExternalInputs = 1
+    export function ifttt1(key:number, event: string, value1: string, value2: string, value3: string) {
+        serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
+        basic.pause(100)
+        let a=serial.readString()
+        basic.pause(1500)
+        return a
+
+    }   
 
     //% blockId=rfidid block="read arduino rfid id"
     //% weight=101 advanced=true
