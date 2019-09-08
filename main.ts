@@ -63,7 +63,7 @@ namespace microbittonodemcu {
     //% blockExternalInputs = 1
     export function setWiFi(SSID: string, PASS: string, mode1: mode) {
         serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
-        basic.pause(2500)
+        basic.pause(3000)
     }
       
     //% blockId=setpinmode1 block="Set nodemcu digital pin %pin | for %XY"
