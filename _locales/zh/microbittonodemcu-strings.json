@@ -10,5 +10,7 @@
     "microbittonodemcu.thingspeak1|block": "設定thingspeak的key %key | 寫入field1 %value1",
     "microbittonodemcu.thingspeak2|block": "設定thingspeak的key %key | 寫入多個field %value1",
     "microbittonodemcu.thingspeak2|block": "設定thingspeak Channel ID %key | 讀取 %value1 的值",
-    "microbittonodemcu.setMicrobit|block": "設定Microbit |TX %tx|RX %rx|baudrate %baudrate"
+    "microbittonodemcu.setMicrobit|block": "設定Microbit |TX %tx|RX %rx|baudrate %baudrate",
+    "microbittonodemcu.setWiFi|block": "設定Nodemcu的WiFi | SSID為 %SSID| Pass為 %PASS| Mode為 %mode1",
+    "microbittonodemcu.ifttt1|block": "連線到IFTTT | API key為 %key | Event為 %event | Value1為 %value1 | Value2為 %value2 | Value3為 %value3"
 }
