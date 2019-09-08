@@ -3,7 +3,8 @@ namespace microbittonodemcu {
       export enum analogpin {
         A0 = 0
      }
-     
+     string aaa=""
+     string bbb=""
       export enum digitalpin {
         D0 = 16,
         D1 = 5,
@@ -55,15 +56,20 @@ namespace microbittonodemcu {
             rx,
             baudrate
         )
-        basic.pause(7000)
+        basic.pause(1000)
     }
 
     //% blockId=setWiFi block="Set Nodemcu | SSID %SSID| Pass %PASS| Mode %mode1 "
     //% weight=101
     //% blockExternalInputs = 1
     export function setWiFi(SSID: string, PASS: string, mode1: mode) {
-        serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
-        basic.pause(3000)
+        if (aaa!=SSID && bbb!=PASS)
+        {
+            serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
+            basic.pause(3000)
+            aaa=SSID
+            bbb=SSID
+        } 
     }
       
     //% blockId=setpinmode1 block="Set nodemcu digital pin %pin | for %XY"
