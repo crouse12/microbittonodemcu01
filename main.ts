@@ -65,7 +65,7 @@ namespace microbittonodemcu {
         if (iii<3)
         {
             serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
-            basic.pause(5000)
+            basic.pause(7000)
             iii=iii+1
         }
     }
