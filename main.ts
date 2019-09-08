@@ -55,14 +55,13 @@ namespace microbittonodemcu {
             rx,
             baudrate
         )
-        basic.pause(5000)
     }
 
     //% blockId=setWiFi block="Set Nodemcu | SSID %SSID| Pass %PASS| Mode %mode1 "
     //% weight=101
     //% blockExternalInputs = 1
     export function setWiFi(SSID: string, PASS: string, mode1: mode) {
-        if (iii<3)
+        if (iii<5)
         {
             serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
             basic.pause(7000)
