@@ -104,14 +104,14 @@ namespace microbittonodemcu {
         return parseFloat(a)
     }   
       
-    //% blockId=thingspeak1 block="Thingspeak key %key | Write field1 value %value1 "
+    //% blockId=thingspeak1 block="Connect to Thingspeak key %key | Write field1 value %value1 "
     //% weight=101 
     export function thingspeak1(key:string, value1: string) {
         serial.writeLine("t\="+key+","+value1+"\\n")
         basic.pause(8000)
     }
       
-    //% blockId=thingspeak2 block="Thingspeak key %key | Write fields value %value1 "
+    //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write fields value %value1 "
     //% weight=101
     export function thingspeak2(key:string, value1: number[]) {
         let a=value1.length
@@ -131,7 +131,7 @@ namespace microbittonodemcu {
         serial.writeLine("t\="+key+","+b+"\\n")
         basic.pause(8000)
     }
-     //% blockId=thingspeak3 block="Thingspeak Channel ID %key | Read %value1 value"
+     //% blockId=thingspeak3 block="Connect to Thingspeak Channel ID %key | Read %value1 value"
     //% weight=101
     export function thingspeak3(key:number, value1: value555): string {
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
