@@ -69,6 +69,7 @@ namespace microbittonodemcu {
             basic.pause(3000)
             aaa=SSID
             bbb=SSID
+            basic.showString("Hello!")
         } 
     }
       
