@@ -55,7 +55,7 @@ namespace microbittonodemcu {
             rx,
             baudrate
         )
-        basic.pause(4000)
+        basic.pause(7000)
     }
 
     //% blockId=setWiFi block="Set Nodemcu | SSID %SSID| Pass %PASS| Mode %mode1 "
