@@ -3,8 +3,8 @@ namespace microbittonodemcu {
       export enum analogpin {
         A0 = 0
      }
-     string aaa=""
-     string bbb=""
+     let aaa=""
+     let bbb=""
       export enum digitalpin {
         D0 = 16,
         D1 = 5,
