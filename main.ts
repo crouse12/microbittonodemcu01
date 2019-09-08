@@ -62,10 +62,10 @@ namespace microbittonodemcu {
     //% weight=101
     //% blockExternalInputs = 1
     export function setWiFi(SSID: string, PASS: string, mode1: mode) {
-        if (iii<15)
+        if (iii<3)
         {
             serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
-            basic.pause(7000)
+            basic.pause(3000)
             iii=iii+1
         }
     }
