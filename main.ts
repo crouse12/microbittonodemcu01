@@ -147,7 +147,7 @@ namespace microbittonodemcu {
               if (i==0)
               {
                     b=value12[0].toString()
-              }else
+              }else if (value12[i].toString()!=undefined || value12[i]!=null)
               {
                     let c=i+1
                     b=b+"\&field"+c.toString()+"="+value12[i].toString()
