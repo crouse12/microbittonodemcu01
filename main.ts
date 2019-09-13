@@ -72,7 +72,7 @@ namespace microbittonodemcu {
     
     function check()
     {  
-        if (iii<3 && ssid1!="")
+        if (iii<2 && ssid1!="")
         {
             serial.writeLine("setwifi="+ssid1+","+pass1+","+mode2+",1\\n")  
             basic.pause(3000)
