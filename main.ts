@@ -6,7 +6,7 @@ namespace microbittonodemcu {
      let iii=1
      let ssid1=""
      let pass1=""
-     let mode2=1
+     let mode2
       export enum digitalpin {
         D0 = 16,
         D1 = 5,
