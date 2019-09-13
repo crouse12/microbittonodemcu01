@@ -6,7 +6,7 @@ namespace microbittonodemcu {
      let iii=1
      let ssid1=""
      let pass1=""
-     let mode2
+     let mode2=1
       export enum digitalpin {
         D0 = 16,
         D1 = 5,
@@ -74,7 +74,7 @@ namespace microbittonodemcu {
     {  
         if (iii<3 && ssid1!="")
         {
-            serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
+            serial.writeLine("setwifi="+ssid1+","+pass1+","+mode2+",1\\n")  
             basic.pause(3000)
             iii=iii+1
         }
