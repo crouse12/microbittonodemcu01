@@ -113,28 +113,7 @@ namespace microbittonodemcu {
         serial.writeLine("t\="+key+","+value1+"\\n")
         basic.pause(8000)
     }
-      
-    //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
-    //% weight=101
-    export function thingspeak2(key:string, value1: number[]) {
-        let a=value1.length
-        let b=""
-        let i
-        for (i=0;i<a;i++)
-        {
-              if (i==0)
-              {
-                    b=value1[0].toString()
-              }else
-              {
-                    let c=i+1
-                    b=b+"\&field"+c.toString()+"="+value1[i].toString()
-              }
-        }
-        serial.writeLine("t\="+key+","+b+"\\n")
-        basic.pause(8000)
-    }
-      
+            
     //% blockId=thingspeak4 
     //% block="Connect to Thingspeak key %key | Write Fields value | Field1 value %value1 || Field2 value %value2 Field3 value %value3 Field4 value %value4 Field5 value %value5 Field6 value %value6 Field7 value %value7"
     //% weight=101  
@@ -157,6 +136,29 @@ namespace microbittonodemcu {
         serial.writeLine("t\="+key+","+b+"\\n")
         basic.pause(8000)
     }
+      
+    //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
+    //% weight=101
+    export function thingspeak2(key:string, value1: number[]) {
+        let a=value1.length
+        let b=""
+        let i
+        for (i=0;i<a;i++)
+        {
+              if (i==0)
+              {
+                    b=value1[0].toString()
+              }else
+              {
+                    let c=i+1
+                    b=b+"\&field"+c.toString()+"="+value1[i].toString()
+              }
+        }
+        serial.writeLine("t\="+key+","+b+"\\n")
+        basic.pause(8000)
+    }
+
+      
       
      //% blockId=thingspeak3 block="Connect to Thingspeak Channel ID %key | Read %value1 value"
     //% weight=101
