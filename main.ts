@@ -72,11 +72,14 @@ namespace microbittonodemcu {
     
     function check()
     {  
-        if (iii<2 && ssid1!="")
+        if (iii==1 && ssid1!="")
         {
-            basic.pause(1000)
-            serial.writeLine("setwifi="+ssid1+","+pass1+","+mode2+",1\\n")  
-            basic.pause(3000)
+            let y
+            for(y=0;y<3;y++)
+            {
+                  serial.writeLine("setwifi="+ssid1+","+pass1+","+mode2+",1\\n")  
+                  basic.pause(3000)
+            }
             iii=iii+1
         }
     }
