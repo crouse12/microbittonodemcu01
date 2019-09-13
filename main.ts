@@ -141,16 +141,16 @@ namespace microbittonodemcu {
     export function thingspeak4(key:string, value1: number, value2?:number, value3?:number, value4?:number, value5?:number, value6?:number, valye77?:number) {    
         let b=""
         let i
-        value1={value1,value2,value3,value4,value5,value6,value7}
+        let value12:number[]={value1,value2,value3,value4,value5,value6,value7}
         for (i=0;i<7;i++)
         {
               if (i==0)
               {
-                    b=value1[0].toString()
+                    b=value12[0].toString()
               }else
               {
                     let c=i+1
-                    b=b+"\&field"+c.toString()+"="+value1[i].toString()
+                    b=b+"\&field"+c.toString()+"="+value12[i].toString()
               }
         }
         serial.writeLine("t\="+key+","+b+"\\n")
