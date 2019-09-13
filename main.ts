@@ -4,6 +4,9 @@ namespace microbittonodemcu {
         A0 = 0
      }
      let iii=1
+     let ssid1=""
+     let pass1=""
+     let mode2=1
       export enum digitalpin {
         D0 = 16,
         D1 = 5,
@@ -62,7 +65,14 @@ namespace microbittonodemcu {
     //% weight=101
     //% blockExternalInputs = 1
     export function setWiFi(SSID: string, PASS: string, mode1: mode) {
-        if (iii<3)
+        ssid1=SSID
+        pass1=PASS
+        mode2=mode1
+    }
+    
+    function check()
+    {  
+        if (iii<3 && ssid1!="")
         {
             serial.writeLine("setwifi="+SSID+","+PASS+","+mode1+",1\\n")  
             basic.pause(3000)
@@ -110,8 +120,9 @@ namespace microbittonodemcu {
     //% blockId=thingspeak1 block="Connect to Thingspeak key %key | Write Field1 value %value1 "
     //% weight=101 
     export function thingspeak1(key:string, value1: string) {
+        check()
         serial.writeLine("t\="+key+","+value1+"\\n")
-        basic.pause(8000)
+        basic.pause(4000)
     }
             
     //% blockId=thingspeak4 
@@ -119,6 +130,7 @@ namespace microbittonodemcu {
     //% weight=101  
     //% blockExternalInputs=1
     export function thingspeak4(key:string, value1: number, value2?:number, value3?:number, value4?:number, value5?:number, value6?:number, value7?:number) {    
+        check()
         let b=""
         let i
         let value12:number[]=[value1,value2,value3,value4,value5,value6,value7]
@@ -140,6 +152,7 @@ namespace microbittonodemcu {
     //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
     //% weight=101
     export function thingspeak2(key:string, value1: number[]) {
+        check()
         let a=value1.length
         let b=""
         let i
@@ -163,6 +176,7 @@ namespace microbittonodemcu {
      //% blockId=thingspeak3 block="Connect to Thingspeak Channel ID %key | Read %value1 value"
     //% weight=101
     export function thingspeak3(key:number, value1: value555): string {
+        check()
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
         basic.pause(100)
         let a=serial.readString()
@@ -175,7 +189,8 @@ namespace microbittonodemcu {
     //% blockId=ifttt1 block="Connect to IFTTT | API key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3 "
     //% weight=101 blockExternalInputs = 1 blockGap=1
     export function ifttt1(key: string, event: string, value1: string, value2: string, value3: string) {
-        serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
+          check()
+          serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
     }   
 
     //% blockId=rfidid block="read arduino rfid id"
