@@ -185,7 +185,7 @@ namespace microbittonodemcu {
         basic.pause(100)
         let a=serial.readString()
         basic.pause(1500)
-        return a
+        return parseFloat(a)
 
     }     
       
