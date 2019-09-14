@@ -179,7 +179,7 @@ namespace microbittonodemcu {
       
      //% blockId=thingspeak3 block="Connect to Thingspeak Channel ID %key | Read %value1 value"
     //% weight=101
-    export function thingspeak3(key:number, value1: value555): string {
+    export function thingspeak3(key:number, value1: value555): number {
         check()
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
         basic.pause(100)
